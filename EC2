@@ -1,0 +1,46 @@
+1. What Is Amazon Ec2 Service ?
+Amazon Elastic Compute Cloud (Amazon EC2) is a Amazon web service that provides resizable (scalable) computing capacity in the cloud. You can use Amazon EC2 to launch as many virtual servers you need. In Amazon EC2 you can configure security and networking as well as manage storage.Amazon EC2 service also helps in obtaining and configuring capacity using minimal friction.
+
+2.Features of Amazon EC2?
+
+Amazon EC2 provides the following features:
+
+---> Virtual computing environments, known as instances
+
+---> Preconfigured templates for your instances, known as Amazon Machine Images (AMIs), that package the bits you need for your server (including the operating system and additional software)
+
+---> Various configurations of CPU, memory, storage, and networking capacity for your instances, known as instance types
+
+---> Secure login information for your instances using key pairs (AWS stores the public key, and you store the private key in a secure place)
+
+---> Storage volumes for temporary data that's deleted when you stop or terminate your instance, known as instance store volumes
+
+---> Persistent storage volumes for your data using Amazon Elastic Block Store (Amazon EBS), known as Amazon EBS volumes
+
+---> Multiple physical locations for your resources, such as instances and Amazon EBS volumes, known as Regions and Availability Zones
+
+---> A firewall that enables you to specify the protocols, ports, and source IP ranges that can reach your instances using security groups
+
+---> Static IPv4 addresses for dynamic cloud computing, known as Elastic IP addresses
+
+---> Metadata, known as tags, that you can create and assign to your Amazon EC2 resources
+
+---> Virtual networks you can create that are logically isolated from the rest of the AWS cloud, and that you can optionally connect to your own network, known as virtual private clouds (VPCs)
+
+3.The Difference Between EBS Snapshots and AMI Images?
+
+A) An EBS snapshot is a backup of a single EBS volume. The EBS snapshot contains all the data stored on the EBS volume at the time the EBS snapshot was created.
+
+An AMI image is a backup of an entire EC2 instance. Associated with an AMI image are EBS snapshots. Those EBS snapshots are the backups of the individual EBS volumes attached to the EC2 instance at the time the AMI image was created.
+
+4.What is instances?
+A) Instance is a virtual server in the AWS cloud. With Amazon EC2, you can set up and configure the operating system and applications that run on your instance.
+
+5.What is Elastic IP addresses?
+A) An Elastic IP address is a static IPv4 address designed for dynamic cloud computing. An Elastic IP address is associated with your AWS account. With an Elastic IP address, you can mask the failure of an instance or software by rapidly remapping the address to another instance in your account.
+
+6. What is AMI?
+A) AMI stands for Amazon Machine Image.  It’s a template that provides the information (an operating system, an application server, and applications) required to launch an instance, which is a copy of the AMI running as a virtual server in the cloud.  You can launch instances from as many different AMIs as you need.
+
+7.What is auto-scaling?
+A) Auto-scaling is a function that allows you to provision and launch new instances whenever there is a demand. It allows you to automatically increase or decrease resource capacity in relation to the demand.

@@ -1,0 +1,55 @@
+1.What is VPC?
+A) A virtual private cloud (VPC) is a virtual network dedicated to your AWS account. It is logically isolated from other virtual networks in the AWS cloud. You can launch your AWS resources, such as Amazon EC2 instance, into your VPC.
+
+2.What is subnet?
+A) subnet is a logical subdivision of an IP network.  The parctice of dividing a network into two (or) more networks is called subnetting
+
+2.Subnetwork or
+A) subnet is a logical subdivision of an IP network. The practice of dividing a network into two or more networks is called subnetting.AWS provides two types of subnetting one is Public which allow the internet to access the machine and another is private which is hidden from the internet.
+
+3.What is instances?
+A) Instance is a virtual server in the AWS cloud. With Amazon EC2, you can set up and configure the operating system and applications that run on your instance.
+
+For more details please refer my medium post  https://medium.com/@das.ranbir/create-a-secure-aws-vpc-architecture-fd4aeb0f0b25
+
+4.What is public subnet?
+A) A public subnet with a size /24 IPv4 CIDR block (example: 10.0.0.0/24). This provides 256 private IPv4 addresses. A public subnet is a subnet that's associated with a route table that has a route to an Internet gateway.
+
+5.What is private subnet?
+A) A private subnet with a size /24 IPv4 CIDR block (example: 10.0.1.0/24). This provides 256 private IPv4 addresses. A privatenet is associated with a route table the has a route to a Nat gateway
+
+6.What is NAT gateway
+A) (NAT simply means Network address translation) A NAT gateway with its own Elastic IPv4 address. Instances in the private subnet can send requests to the Internet through the NAT gateway over IPv4 (for example, for software updates).
+
+7.What is Route table?
+A) A route table contains a set of rules, called routes , that are used to determine where network traffic from your VPC is directed.
+
+8.What is Internet gateway?
+A) A internet gateway that you attach to your VPC to enable communication between resources in your VPC and the internet.
+
+9.Why do we need to create VPC?
+A) Secure. Amazon VPC provides advanced security features, such as security groups and network access control lists, to enable inbound and outbound filtering at the instance and subnet level. In addition, you can store data in Amazon S3 and restrict access so that it's only accessible from instances inside your VPC.
+
+10. What is security group?
+A) A security group acts as a virtual firewall for your EC2 instances to control incoming and outgoing traffic. Inbound rules control the incoming traffic to your instance, and outbound rules control the outgoing traffic from your instance. When you launch an instance, you can specify one or more security groups. If you don't specify a security group, Amazon EC2 uses the default security group.
+
+11. what is NACL
+A) A network access control list (ACL) is an optional layer of security for your VPC that acts as a firewall for controlling traffic in and out of one or more subnets. You might set up network ACLs with rules similar to your security groups in order to add an additional layer of security to your VPC. 
+
+12. Comparison of security groups and network ACLs
+
+   1. Security group
+
+1.Operates at the instance level
+2.Supports allow rules only
+3.Is stateful: Return traffic is automatically allowed, regardless of any rules
+4.We evaluate all rules before deciding whether to allow traffic
+5.Applies to an instance only if someone specifies the security group when launching the instance, or associates the security group with the instance later on
+
+   2. Network ACL
+
+1. Operates at the subnet level
+2.Supports allow rules and deny rules
+3.Is stateless: Return traffic must be explicitly allowed by rules
+4.We process rules in order, starting with the lowest numbered rule, when deciding whether to allow traffic
+v 5.Automatically applies to all instances in the subnets that it's associated with (therefore, it provides an additional layer of defense if the security group rules are too permissive)

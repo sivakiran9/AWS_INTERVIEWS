@@ -1,0 +1,18 @@
+1.what is IAM Policy?
+A.) A policy defines the AWS permissions that you can assign to a user, group, or role. You can create and edit a policy in the visual editor and using JSON. Learn more
+
+2.what is IAM Role?
+
+A.) Roles are used to providing permissions to entities which you can trust within your AWS account. Roles are very similar to users. However,  with roles, you do not require to create any username and password to work with the resources.
+
+                                       (or)
+
+A.) IAM roles are a secure way to grant permissions to entities that you trust. Examples of entities include the following:
+
+IAM user in another account
+Application code running on an EC2 instance that needs to perform actions on AWS resources
+An AWS service that needs to act on resources in your account to provide its features
+Users from a corporate directory who use identity federation with SAML
+IAM roles issue keys that are valid for short durations, making them a more secure way to grant access
+
+
